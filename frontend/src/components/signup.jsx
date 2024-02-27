@@ -17,7 +17,7 @@ const Signup = () => {
 
     function handleSubmit(e) {
         e.preventDefault(); // Prevent default form submission
-        axios.post("http://localhost:8000/signup", values)
+        axios.post("https://library-management-backend-ipeu.onrender.com/signup", values)
             .then((res) => {
                 console.log(res.data);
             })

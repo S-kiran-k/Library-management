@@ -12,7 +12,7 @@ const ManageBooksPage = () => {
 
     const fetchBooks = async () => {
         try {
-            let url = 'http://localhost:8000/api/books';
+            let url = 'https://library-management-backend-ipeu.onrender.com/api/books';
             const queryParams = [];
             if (searchTitle.trim() !== '') {
                 queryParams.push(`title=${encodeURIComponent(searchTitle)}`);
@@ -34,7 +34,7 @@ const ManageBooksPage = () => {
 
     const deleteBook = async (bookId) => {
         try {
-            await fetch(`http://localhost:8000/api/books/${bookId}`, {
+            await fetch(`https://library-management-backend-ipeu.onrender.com/api/books/${bookId}`, {
                 method: 'DELETE',
             });
 
