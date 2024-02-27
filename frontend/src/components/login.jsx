@@ -2,13 +2,14 @@ import { useState } from 'react';
 import axios from 'axios';
 import email_icon from '../assets/email.png';
 import password_icon from '../assets/password.png';
-
+import {useNavigate} from 'react-router-dom'
+// import { Link } from 'react-router-dom';
 const Login = () => {
     const [credentials, setCredentials] = useState({
         email: '',
         password: '',
     });
-
+    const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState(''); // For displaying errors
 
     function handleChange(e) {
@@ -23,6 +24,7 @@ const Login = () => {
                 if (res.data.success) {
                     // Successful login, redirect to home/dashboard
                     console.log("Login successful:", res.data);
+                    navigate("/add")
                     // Example: 
                     // window.location.href = '/dashboard';  
                 } else {
@@ -52,7 +54,9 @@ const Login = () => {
                     <div className="text-center">
                         <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit">Login</button>
                     </div>
+                    
                 </form>
+                
             </div>
         </div>
     );

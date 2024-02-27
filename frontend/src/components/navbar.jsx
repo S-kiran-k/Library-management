@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className='flex flex-wrap items-center justify-between bg-slate-400 bg-4'>
             <div className='flex items-center flex-shrink-0 mr-6'>
-                <span className='text-xl font-semibold p-10 tracking-tight'>Library Management System</span>
+                <span className='text-4xl font-semibold text-white p-10 tracking-tight'>Library Management System</span>
             </div>
             <div className='block lg:hidden'>
                 <button className='flex items-center px-3 py-2 text-teal-200 border border-teal-400 rounded hover:text-white hover:border-white' onClick={() => alert('Menu button clicked')}>
