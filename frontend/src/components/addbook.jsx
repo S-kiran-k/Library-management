@@ -11,7 +11,7 @@ const AddBookPage = () => {
     const addBook = async () => {
         try {
             // Make the API call to add the new book
-            const response = await fetch('http://localhost:8000/api/books', {
+            const response = await fetch('https://library-management-backend-ipeu.onrender.com/api/books', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
